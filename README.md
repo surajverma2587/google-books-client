@@ -42,3 +42,33 @@ As a user, when I land on the /search (homepage) then I should be able to see a 
 - There should be a `<Header />` component that has 2 props, the `title` and the `subtitle`
 - The title and subtitle should be aligned to the top of the jumbotron
 - The header should have sufficient margin underneath it for the search bar that is to come.
+
+### GB-4 - Create the BookList component for the results of a search
+
+#### Description
+
+As a user, I want to see the results of my search in a list, so that I can see what books are available to me.
+As a user, I want to be able to click the `View` button and be taken to a google books page on that books.
+As a user, I want to be able to save my book so that I can view a list of my saved books.
+This has a fair amount of different styling on it, so there will be multiple layout choices that need to be considered.
+
+#### ACs
+
+- Create a `<BookList />` component according to the designs, utilising the props according to the following object that we've agreed on:
+
+```js
+{
+  authors: ["Suzanne Collins"]
+  description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature."
+  image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
+  title: "The Hunger Games",
+  subtitle: null
+}
+```
+
+- The BookList should display the book's title, the book's authors (which is an array), along with the image underneath and the description to the right of it.
+- Don't hook it up, but there should be a View button and a Save button in the top right that allow a user to view and save the book respectively.
+- The card should utilise some form of List component or Card component using the bootstrap styling so that it looks of a certain type.
+- The container that this component is in, needs to have the heading 'Results'
+- Click View should take the user to the book's link property and Save/Delete should interact with a CRUD like operation on the backend

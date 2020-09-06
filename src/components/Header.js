@@ -5,10 +5,10 @@ const Header = ({
   subTitle = "Search for and Save Books of Interest",
 }) => {
   return (
-    <div class="jumbotron text-center">
-      <h1 class="display-4">{title}</h1>
-      <p class="lead">{subTitle}</p>
-      <hr class="my-4" />
+    <div className="jumbotron text-center">
+      <h1 className="display-4">{title}</h1>
+      <p className="lead">{subTitle}</p>
+      <hr className="my-4" />
     </div>
   );
 };
