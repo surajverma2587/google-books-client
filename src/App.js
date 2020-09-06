@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 const App = () => {
   return (
     <div>
-      <Button />
+      <Button variant="primary">Start Here</Button>
     </div>
   );
 };
