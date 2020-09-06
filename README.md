@@ -30,3 +30,15 @@ We can create a navbar in dark theme potentially (dealer's choice) from the reac
 - The `<Navigation />` should be abstracted into it's own component, just like the `<Router />`
 - Remove React-Bootstrap in favour of the standard Bootstrap package.
 - Create dummy screens for both `<Search />` and `<Saved />`
+
+### GB-3 - Add Jumbotron Header
+
+#### Description
+
+As a user, when I land on the /search (homepage) then I should be able to see a header component that looks like the Bootstrap jumbotron
+
+#### ACs
+
+- There should be a `<Header />` component that has 2 props, the `title` and the `subtitle`
+- The title and subtitle should be aligned to the top of the jumbotron
+- The header should have sufficient margin underneath it for the search bar that is to come.
