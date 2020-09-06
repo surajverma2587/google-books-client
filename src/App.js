@@ -1,11 +1,17 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import { HashRouter } from "react-router-dom";
+
+import Navigation from "./NavBar";
+import Routes from "./Routes";
 
 const App = () => {
   return (
-    <div>
-      <Button variant="primary">Start Here</Button>
-    </div>
+    <HashRouter>
+      <Navigation />
+      <div className="container my-4">
+        <Routes />
+      </div>
+    </HashRouter>
   );
 };
 export default App;
