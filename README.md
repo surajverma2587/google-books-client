@@ -72,3 +72,18 @@ This has a fair amount of different styling on it, so there will be multiple lay
 - The card should utilise some form of List component or Card component using the bootstrap styling so that it looks of a certain type.
 - The container that this component is in, needs to have the heading 'Results'
 - Click View should take the user to the book's link property and Save/Delete should interact with a CRUD like operation on the backend
+
+### GB-5 - Create the search bar component
+
+#### Description
+
+As a user I want to search for books by their title, so that I can see the updated results underneath.
+As a user, I want the results to update after I click out of the search bar, or I click the search button, or I press enter.
+Probably best to put the placeholder in here rather than deal with any of the complexity for now, we'll implement the logic afterwards.
+
+#### ACs
+
+- A `<SearchBar />` component that has an input and a button
+- This doesn't HAVE to be part of a form if you don't want it to
+- Make use of the bootstrap default for a search bar.
+- Should have a label at the top called 'Book'

@@ -2,6 +2,7 @@ import React from "react";
 
 import BookList from "../components/BookList";
 import mockBooks from "../data/books";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   const btnControls = [
@@ -23,6 +24,7 @@ const Home = () => {
 
   return (
     <div>
+      <SearchBar />
       <BookList title="Results" books={mockBooks} btnControls={btnControls} />
     </div>
   );
