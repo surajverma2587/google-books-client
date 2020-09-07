@@ -4,12 +4,12 @@ const formatAuthors = (authors) => {
   return authors.join(" & ");
 };
 
-const renderButtons = (btnControls, link) => {
+const renderButtons = (btnControls, link, id) => {
   return btnControls.map(({ text, onClick, className }, index) => {
     if (text === "View") {
       return (
         <a href={link} target="_blank" rel="noopener noreferrer" key={index}>
-          <button type="button" className={className}>
+          <button type="button" className={className} id={id}>
             {text}
           </button>
         </a>
@@ -21,6 +21,7 @@ const renderButtons = (btnControls, link) => {
           className={className}
           onClick={onClick}
           key={index}
+          id={id}
         >
           {text}
         </button>
@@ -37,6 +38,7 @@ const BookCard = ({
   image,
   link,
   btnControls,
+  id,
 }) => {
   return (
     <div className="card mb-3">
@@ -51,7 +53,7 @@ const BookCard = ({
           </p>
         </div>
         <div className="col-md-3 text-right">
-          {renderButtons(btnControls, link)}
+          {renderButtons(btnControls, link, id)}
         </div>
       </div>
       <div className="row no-gutters">

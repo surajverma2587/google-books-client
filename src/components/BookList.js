@@ -6,7 +6,7 @@ const BookList = ({ title, books = [], btnControls }) => {
     <div className="border p-4">
       <h4>{title}</h4>
       {books.map((book, index) => (
-        <BookCard {...book} btnControls={btnControls} key={index} />
+        <BookCard {...book} btnControls={btnControls} id={index} key={index} />
       ))}
     </div>
   );

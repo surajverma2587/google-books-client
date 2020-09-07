@@ -13,15 +13,14 @@ const Home = () => {
   const btnControls = [
     {
       text: "View",
-      onClick: () => {
-        console.log("view clicked");
-      },
       className: "btn btn-primary mx-1",
     },
     {
       text: "Save",
-      onClick: () => {
-        console.log("save clicked");
+      onClick: async ({ target }) => {
+        const URL = "https://guarded-tor-11800.herokuapp.com/api/save";
+        const payload = books[target.id];
+        await axios.post(URL, payload);
       },
       className: "btn btn-success mx-1",
     },
