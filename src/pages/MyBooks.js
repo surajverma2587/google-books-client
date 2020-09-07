@@ -11,15 +11,15 @@ const MyBooks = () => {
   const btnControls = [
     {
       text: "View",
-      onClick: () => {
-        console.log("view clicked");
-      },
       className: "btn btn-primary mx-1",
     },
     {
       text: "Delete",
-      onClick: () => {
-        console.log("delete clicked");
+      onClick: async ({ target }) => {
+        const { _id } = savedBooks[target.id];
+        const URL = `https://guarded-tor-11800.herokuapp.com/api/books/${_id}`;
+        const { data } = await axios.delete(URL);
+        setSavedBooks(data.results);
       },
       className: "btn btn-danger mx-1",
     },
